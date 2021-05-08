@@ -1,407 +1,495 @@
-<section class="posts">
+<!DOCTYPE html>
+<html lang="en">
 
-  
-
-    <article>
-
-      <div>
-
-        <a href="/2021/05/07/test/"></a>
-
-      </div>
-
-      <div class="post-content">
-
-        <!DOCTYPE html>
-<html>
+<!-- Head tag -->
 <head>
-<title>test</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<style type="text/css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="Hexo" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        
+        
+    </title>
+
+    <link rel="canonical" href="http://example.com/">
+
+    <!-- Bootstrap Core CSS -->
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/blog-style.css">
+
+
+    <!-- Pygments Github CSS -->
+    
+<link rel="stylesheet" href="/css/syntax.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
+" data-ishome = "true" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Hexo
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+
+<style>
+
+    .custom-haojen-container .post-preview:nth-of-type(1),
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
+        text-align: center;
+        background-repeat: no-repeat;
+        border-radius: 3px;
+        background-size: cover;
+        padding: 0;
+        height: 300px;
+        display: table;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.16);
+    }
+
+    /*去掉诗歌的背景图片*/
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
+        background-image: none !important;
+        background-color: rgba(255, 248, 220, 0.5);
+    }
+
+    .custom-haojen-container .post-preview:nth-child(1) h2,
+    .custom-haojen-container .post-preview:nth-child(1) .post-meta,
+    .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+        text-shadow: 0 0 40px rgba(0, 0, 0, 1);
+        letter-spacing: 1px;
+        color: #fff;
+        margin-top: 0;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .custom-haojen-container .post-preview:nth-child(1) .post-meta {
+        font-size: .9em;
+        font-weight: 300;
+        margin-top: 0;
+    }
+
+    .custom-haojen-container .post-preview-poetry:nth-child(1) .post-subtitle {
+        letter-spacing: 6px;
+        font-size: 18px;
+        font-family: unset;
+        font-weight: 400;
+        color: rgba(0, 0, 0, .75)
+    }
+
+    /*不显示摘要*/
+    .custom-haojen-container .post-preview:nth-child(1) .post-content-preview {
+        display: none
+    }
+
+    /*只第一个显示背景图片*/
+    .custom-haojen-container .post-preview:not(:nth-child(1)) {
+        background-image: none !important;
+    }
+
+    /*第一个分界线去掉*/
+    .custom-haojen-container hr:nth-of-type(1) {
+        display: none;
+    }
+
+    /*主题*/
+    .custom-haojen-container .post-preview:nth-of-type(1) > a {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    /*诗词标题*/
+    .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+        font-size: 35px;
+        font-family: STKaiti;
+        color: rgba(0, 0, 0, .8);
+    }
+
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) .post-meta {
+        color: #0e2231;
+    }
+
+    @media (max-width: 768px) {
+        .custom-haojen-container .post-preview:nth-child(1) {
+            height: 240px;
+        }
+
+        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+            font-size: 28px !important;
+            margin-top: 0;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .custom-haojen-container .post-preview:nth-of-type(1) > a {
+            padding: 20px
+        }
+    }
+
+    /*手机屏幕*/
+    @media (max-width: 400px) {
+        .custom-haojen-container .post-preview:nth-child(1) {
+            height: 195px;
+        }
+
+        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+            font-size: 20px !important;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+            font-size: 16px;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) a {
+            padding: 30px 20px;
+        }
+    }
+</style>
+
+<!-- Page Header -->
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
+    <div class="row">
+        <header class="intro-header">
+            <div class="container">
+                <div class="site-heading text-center">
+                    <div class="about-me">
+                        <!--移动端头部显示-->
+                        <img src=""/>
+                        <h5><a href="/about/">John Doe</a></h5>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+<!-- Main Content -->
+<div class="container custom-haojen-container">
+    <!-- Post Container -->
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
+            <!-- Main Content -->
+
+
+
+<div class="post-preview "
+     style="background-image: url('')">
+    <a href="/2021/05/08/dangjian/">
+        <h2 class="post-title">
+            未命名
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2021-05-08
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                
+
+
+MarkdownPad Document
+
+
 /* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
 /* Author: Nicolas Hery - http://nicolashery.com */
-/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
-/* Source: https://github.com/nicolahery/markdownpad-github */
+/* Ve..
+            </p>
+        </div>
+    </a>
 
-/* RESET
-=============================================================================*/
+</div>
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
+<hr>
 
-/* BODY
-=============================================================================*/
 
-body {
-  font-family: Helvetica, arial, freesans, clean, sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fff;
-  padding: 20px;
-  max-width: 960px;
-  margin: 0 auto;
-}
 
-body>*:first-child {
-  margin-top: 0 !important;
-}
+<div class="post-preview "
+     style="background-image: url('')">
+    <a href="/2021/05/08/qingniantuan/">
+        <h2 class="post-title">
+            未命名
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2021-05-08
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                
 
-body>*:last-child {
-  margin-bottom: 0 !important;
-}
 
-/* BLOCKS
-=============================================================================*/
+qingniantuan
 
-p, blockquote, ul, ol, dl, table, pre {
-  margin: 15px 0;
-}
 
-/* HEADERS
-=============================================================================*/
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b..
+            </p>
+        </div>
+    </a>
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 20px 0 10px;
-  padding: 0;
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-}
+</div>
 
-h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
-  font-size: inherit;
-}
+<hr>
 
-h1 {
-  font-size: 28px;
-  color: #000;
-}
 
-h2 {
-  font-size: 24px;
-  border-bottom: 1px solid #ccc;
-  color: #000;
-}
 
-h3 {
-  font-size: 18px;
-}
 
-h4 {
-  font-size: 16px;
-}
+<!-- 翻页 pager -->
 
-h5 {
-  font-size: 14px;
-}
+<ul class="pager">
+    
+    
+</ul>
 
-h6 {
-  color: #777;
-  font-size: 14px;
-}
 
-body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
-  margin-top: 0;
-  padding-top: 0;
-}
+        </div>
+        <!-- Sidebar Container -->
+        <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
 
-a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
-  margin-top: 0;
-  padding-top: 0;
-}
+            <!-- About Me -->
+            <section class="visible-md visible-lg" style="padding: 0 18px">
+                <div class="short-about">
+                    <!--侧边栏头像-->
+                    
+                    <h5><a href="/about/">John Doe</a></h5>
+                    
+                    <hr>
+                    <!-- SNS Link 社交 -->
+                    <ul class="list-inline">
+                        
+                        
+                        
 
-h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
-  margin-top: 10px;
-}
+                        
 
-/* LINKS
-=============================================================================*/
+                        
 
-a {
-  color: #4183C4;
-  text-decoration: none;
-}
+                        
 
-a:hover {
-  text-decoration: underline;
-}
+                        
+                    </ul>
+                </div>
+            </section>
 
-/* LISTS
-=============================================================================*/
+            <!-- Featured Tags  标签 -->
+            
 
-ul, ol {
-  padding-left: 30px;
-}
+            
 
-ul li > :first-child, 
-ol li > :first-child, 
-ul li ul:first-of-type, 
-ol li ol:first-of-type, 
-ul li ol:first-of-type, 
-ol li ul:first-of-type {
-  margin-top: 0px;
-}
+        </div>
+    </div>
+</div>
 
-ul ul, ul ol, ol ol, ol ul {
-  margin-bottom: 0;
-}
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
 
-dl {
-  padding: 0;
-}
+                
 
-dl dt {
-  font-size: 14px;
-  font-weight: bold;
-  font-style: italic;
-  padding: 0;
-  margin: 15px 0 5px;
-}
+                
 
-dl dt:first-child {
-  padding: 0;
-}
+                
 
-dl dt>:first-child {
-  margin-top: 0px;
-}
+                
 
-dl dt>:last-child {
-  margin-bottom: 0px;
-}
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Hexo 2021
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a target="_blank" rel="noopener" href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
 
-dl dd {
-  margin: 0 0 15px;
-  padding: 0 15px;
-}
+            </div>
+        </div>
+    </div>
+</footer>
 
-dl dd>:first-child {
-  margin-top: 0px;
-}
+<!-- jQuery -->
 
-dl dd>:last-child {
-  margin-bottom: 0px;
-}
+<script src="/js/jquery.min.js"></script>
 
-/* CODE
-=============================================================================*/
 
-pre, code, tt {
-  font-size: 12px;
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
-}
+<!-- Bootstrap Core JavaScript -->
 
-code, tt {
-  margin: 0 0px;
-  padding: 0px 0px;
-  white-space: nowrap;
-  border: 1px solid #eaeaea;
-  background-color: #f8f8f8;
-  border-radius: 3px;
-}
+<script src="/js/bootstrap.min.js"></script>
 
-pre>code {
-  margin: 0;
-  padding: 0;
-  white-space: pre;
-  border: none;
-  background: transparent;
-}
 
-pre {
-  background-color: #f8f8f8;
-  border: 1px solid #ccc;
-  font-size: 13px;
-  line-height: 19px;
-  overflow: auto;
-  padding: 6px 10px;
-  border-radius: 3px;
-}
+<!-- Custom Theme JavaScript -->
 
-pre code, pre tt {
-  background-color: transparent;
-  border: none;
-}
+<script src="/js/blog.js"></script>
 
-kbd {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background-color: #DDDDDD;
-    background-image: linear-gradient(#F1F1F1, #DDDDDD);
-    background-repeat: repeat-x;
-    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
-    border-image: none;
-    border-radius: 2px 2px 2px 2px;
-    border-style: solid;
-    border-width: 1px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 10px;
-    padding: 1px 4px;
-}
 
-/* QUOTES
-=============================================================================*/
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
 
-blockquote {
-  border-left: 4px solid #DDD;
-  padding: 0 15px;
-  color: #777;
-}
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://example.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
 
-blockquote>:first-child {
-  margin-top: 0px;
-}
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
 
-blockquote>:last-child {
-  margin-bottom: 0px;
-}
 
-/* HORIZONTAL RULES
-=============================================================================*/
 
-hr {
-  clear: both;
-  margin: 15px 0;
-  height: 0px;
-  overflow: hidden;
-  border: none;
-  background: transparent;
-  border-bottom: 4px solid #ddd;
-  padding: 0;
-}
+<!-- Google Analytics -->
 
-/* TABLES
-=============================================================================*/
 
-table th {
-  font-weight: bold;
-}
 
-table th, table td {
-  border: 1px solid #ccc;
-  padding: 6px 13px;
-}
+<!-- Baidu Tongji -->
 
-table tr {
-  border-top: 1px solid #ccc;
-  background-color: #fff;
-}
 
-table tr:nth-child(2n) {
-  background-color: #f8f8f8;
-}
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
 
-/* IMAGES
-=============================================================================*/
+  _st('install','','2.0.0');
+</script>
 
-img {
-  max-width: 100%
-}
-</style>
-<meta name="generator" content="Hexo 5.4.0"></head>
-<body>
-<h1><center><font face="微软黑体">新疆生产建设兵团第三师48团学校</h1>
-<h2><center>第一章</h2>
-<h3><center><strong>团务知识</strong><p align="right">作者：周广平</h3>
-<h4><strong>青春三师|一图读懂第三师图木舒克市共青团改革实施方案</strong></h4>
-<p><div align=center><img src="https://i.loli.net/2021/05/07/kHXhWnQEcl6CZBV.png" alt="26.png" /></p>
-<p>为全面贯彻落实习近平新时代中国特色社会主义思想和党的十九大精神，深入学习贯彻习近平总书记就兵团深化改革作出的一系列重要讲话、重要指示精神和关于青少年、共青团工作的重要指示精神，认真落实党中央关于群团改革的总体要求和兵、师党委工作部署，紧紧围绕新疆工作总目标，聚焦兵团职责使命，更好发挥兵团特殊作用，切实做好新形势下青年群众工作，根据《新疆生产建设兵团群团改革方案》《共青团新疆生产建设兵团委员会改革实施方案》要求，结合师市共青团工作实际，制定了师市共青团改革实施方案。
-<img src="https://i.loli.net/2021/05/07/ym6IsVxPMwY91ht.jpg" alt="1.jpg.jpg" />
-<center><strong>一图读懂</strong>
-<center><strong>第三师图木舒克市共青团改革实施方案</strong>
-<img src="https://i.loli.net/2021/05/07/9ytJWufSwNmeF8p.jpg" alt="2.jpg.jpg" />
-<img src="https://i.loli.net/2021/05/07/8mqk3YQHsjEiDxM.jpg" alt="3.jpg.jpg" />
-<img src="https://i.loli.net/2021/05/07/mbIUeMh2HN5qYSs.jpg" alt="5.jpg" />
-<img src="https://i.loli.net/2021/05/07/CYm6s4yN1LeQUSX.jpg" alt="6.jpg" />
-<img src="https://i.loli.net/2021/05/07/TIO9X4MhUEztwbr.jpg" alt="7.jpg" />
-<img src="https://i.loli.net/2021/05/07/cLXqJ8wYQngECjh.jpg" alt="8.jpg" />
-<img src="https://i.loli.net/2021/05/07/KHWsZ28MzDBv9LR.jpg" alt="9.jpg" />
-<img src="https://i.loli.net/2021/05/07/SaKiQPYlvFA5oj7.jpg" alt="10.jpg" />
-<img src="https://i.loli.net/2021/05/07/dig9Zm1EKclLzQJ.jpg" alt="11.jpg" />
-<img src="https://i.loli.net/2021/05/07/XslhEU1YAN3SPgd.jpg" alt="12.jpg" />
-<img src="https://i.loli.net/2021/05/07/gld9v7NBiE8JfnH.jpg" alt="13.jpg" />
-<img src="https://i.loli.net/2021/05/07/E9ItulycbGNM83O.jpg" alt="14.jpg" />
-<img src="https://i.loli.net/2021/05/07/zlEUMViQ8Y2AdkH.jpg" alt="15.jpg" />
-<img src="https://i.loli.net/2021/05/07/nxYJD4rwoicAlhd.jpg" alt="16.jpg" />
-<img src="https://i.loli.net/2021/05/07/W81dC9X6vyDb3EU.jpg" alt="17.jpg" />
-<img src="https://i.loli.net/2021/05/07/l8ie6tGRuncVy4j.jpg" alt="18.jpg" />
-<img src="https://i.loli.net/2021/05/07/Gv1xmBVYeStu3N2.jpg" alt="19.jpg" />
-<img src="https://i.loli.net/2021/05/07/tCyk75l4hdNvKXW.jpg" alt="20.jpg" />
-<img src="https://i.loli.net/2021/05/07/oV8fbhw3CdqknZz.jpg" alt="21.jpg" />
-<img src="https://i.loli.net/2021/05/07/GqgPRb9z67aXCZu.jpg" alt="22.jpg" />
-<img src="https://i.loli.net/2021/05/07/2MnIsEpV3TSdzfZ.jpg" alt="23.jpg" />
-<img src="https://i.loli.net/2021/05/07/NCgrOo4SLk5Kdqs.png" alt="24.png" />
-<center><strong>青年兴则国兴，青年强则国强</strong></p>
-<h5><strong>青年兴则国兴，青年强则国强，青年一代有理想、有本领、有担当，国家就有前途，民族就有希望。</strong></h5>
-<p>5
-<p align="left">此次共青团改革是在师市党委、兵团团委坚强领导下以兵团共青团改革实施方案为根本依据，实事求是结合了师市共青团工作实际，广泛凝聚了团内外方方面面的智慧。旨在以体制机制改革为突破口，改革调整师团两级共青团干部队伍、管理模式和工作方式，构建“凝聚青年、服务大局、当好桥梁、从严治团”的工作格局，带动师市各级团组织共同建设思想政治坚定、组织体系健全、运行机制科学、方法举措创新、联系青年密切、作风扎实过硬的共青团，不断增强师市共青团组织的吸引力、凝聚力，扩大有效覆盖，使师市共青团组织围绕中心、服务大局更加扎实，思想引领更加有效，服务青年更加务实。</p>
-<p><p align="left">来源：青春三师（第三师图木舒克市团委微信公众平台）
-<p align="left">审核：李新荣
-<p align="left">顾问：张军</p>
-<h1>第二章</h1>
-<h2>红船领航、建党百年丨铁船紧随、保家卫国</h2>
-<h3><p align="left">红船领航、建党百年:</h3>
-<p><p align="left">“百年征程波澜壮阔，百年初心历久弥坚。从上海石库门到嘉兴南湖，一艘小小红船承载着人民的重托、民族的希望，越过急流险滩，穿过惊涛骇浪，成为领航中国行稳致远的巍巍巨轮。</p>
-<p><img src="https://i.loli.net/2021/05/07/vZ27ndtbughCDpU.gif" alt="01.gif" /></p>
-<p><center>“红船精神”
-<center>昭示着中国共产党人的初心</p>
-<p><img src="https://i.loli.net/2021/05/07/yDUOcbFt3A9a5sj.jpg" alt="红船领航，建党百年" /></p>
-<p><p align="left">1921年，中国共产党第一次全国代表大会在浙江嘉兴南湖的一条游船(后称“红船”)上胜利闭幕，庄严宣告中国共产党的诞生。从此，中国的新民主主义革命就有了坚强的领导者——中国共产党。中国共产党在红船中诞生这一伟大革命实践所表现出来的精神就是：中国革命的航船从这里扬帆起航，体现了“开天辟地、敢为人先”的首创精神；中国共产党的诞生，使中国革命从此有了坚定的理想信念和强大的精神支柱，体现了“坚定理想、百折不挠”的奋斗精神；中国共产党从诞生的那天起，从来就没有自己的私利，而是以全心全意为人民谋福利为根本宗旨，体现了“立党为公、忠诚为民”的奉献精神。</p>
-<h4><p align="left">铁船紧随、保家卫国</h4>
-<p><p align="left">人民海军在党的领导下，走过了72年风雨历 程，从无到有、从小到大、由弱到强，一路劈波斩浪，纵横万里海疆、勇闯远海大洋。</p>
-<p><img src="https://i.loli.net/2021/05/07/vZ27ndtbughCDpU.gif" alt="01.gif" /></p>
-<p><center>“铁船精神”
-<center>展现出中国海军战士的坚守</p>
-<p><p align="left">人民海军壮我海疆，这是70年浴血荣光，70年砥砺奋进的伟大成果。“向海而兴、背海而衰,不能制海、必为海制。”这是历史给予中华民族刻骨铭心的教训。没有海军,就无法保卫我们的海防。巩固强大的海防，是事关国家和民族命运的大事。为建设具有强大综合作战能力的现代化海军而奋斗，按照革命化现代化正规化相统一的原则，努力锻造一支与履行新世纪新阶段我军历史使命要求相适应的强大的人民海军。建设强大的现代化海军是建设世界一流军队的重要标志，是建设海洋强国的战略支撑，是实现中华民族伟大复兴中国梦的重要组成部分。
-<p align="left">“九万里风鹏正举”新时代，新起点，坚定不移发展海洋经济，坚定不移扩大“蓝色朋友圈”，坚定不移建设现代化海军，我们就能取得更壮阔的成就，迎来更广阔的未来。祝贺中国人民海军生日快乐，中国与世界一起劈波斩浪，驶向美丽远方！</p>
-<p><img src="https://i.loli.net/2021/05/07/vZ27ndtbughCDpU.gif" alt="01.gif" /></p>
-<p><center>中国解放军海军
-<center>成立72周年宣传片</p>
-<p><iframe height=500 width=600 src="http://cloudvideo.thepaper.cn/video/14b6e30844004d4bb14a210bfd9eb5d3/hd/db5003af-8276-497b-91a2-c286d6875768-59dfaed9-3d58-f6ce-287d-89a4aa0bee72.mp4"></p>
-<p><p align="left">“潜航大洋，他们是捍卫国家主权的杀手锏；翱翔海天，他们是维护祖国安宁的急先锋；蛟龙突击，他们是攻无不克的夺命刃……”
-<center>人民海军忠于祖国
-<center>人民海军忠于人民
-<center>人民海军忠于960万平方公里的土地
-<center>人民海军忠于18000万公里的海岸线
-<center>人民海军忠于14亿中国老百姓
-<center>72年来
-<center>人民海军从零到有
-<center>一路劈波斩浪，纵横海疆，勇闯大洋
-<center>72年来
-<center>人民海军从弱到强
-<center>一路步履铿锵，走向深蓝，向海图强
-<center>人民海军
-<center>祝你生日快乐</p>
-<p><img src="https://i.loli.net/2021/05/07/4SHpO3dvfA6YGIs.gif" alt="03.gif" /></p>
-<p><p align="left">视频来源：人民网</p>
-<p><p align="left">编辑人：鲁景阳</p>
-<p><p align="left">审核：李新荣</p>
-<p><p align="left">顾问：张军</p>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+<!--wechat title img-->
+<img class="wechat-title-img" src="">
 </body>
+
 </html>
-<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
-
-
-      </div>
-
-      <div>
-
-        <span class="post-time">2021-05-07</span>
-
-      </div>
-
-    </article>
-
-  
-
-</section>
-...
-
-</section>
-
